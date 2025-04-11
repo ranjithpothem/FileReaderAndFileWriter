@@ -19,12 +19,10 @@ public class CarDto {
 
     @Transactional
     public void saveCarDetails(List<Car> list){
-        for(Car car:list){
-            carRepo.save(car);
-        }
+        carRepo.saveAll(list);
     }
 
-    public List<Car> getAllData(){
-     return carRepo.findAll();
+    public List<Car> getNewStatusCarList(){
+      return  carRepo.getAllRecordsStatusIsNew();
     }
 }

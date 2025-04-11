@@ -21,7 +21,7 @@ public class Car {
 
     private String status;
 
-    public String getStatus() {
+    public String getStatus(String done) {
         return status;
     }
 
