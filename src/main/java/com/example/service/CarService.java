@@ -121,6 +121,7 @@ public class CarService {
         List<Car> newStatusCarList = new ArrayList<>();
         File file = new File(fileOutPutPath);
         if (!file.exists()) {
+            logger.info("file not exist , creating new file");
             file.createNewFile();
         }
         for (Car car : carDto.getNewStatusCarList()) {
