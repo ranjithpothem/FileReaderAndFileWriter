@@ -9,7 +9,6 @@ import java.util.List;
 
 @Repository
 public interface CarRepo extends JpaRepository<Car,Long> {
-
     @Query(value = "Select * from cars where status='new'",nativeQuery = true)
     public List<Car> getAllRecordsStatusIsNew();
 }
