@@ -26,9 +26,17 @@ public class CarService {
     List<Car> newStatusCarList = new ArrayList<>();
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(CarService.class);
 
-
+     /*
+      *this is input file location
+      */
     static String folderPath = "C:\\Users\\Ranjith.P\\Cars\\Input";
+    /*
+     *this is output file location
+     */
     static String outPutFolderPath = "C:\\Users\\Ranjith.P\\Cars\\Output";
+    /*
+     *this is archive file location
+     */
     static String newInputFileFolderPath = "C:\\Users\\Ranjith.P\\Cars\\Archive";
 
     //inputFilePath
