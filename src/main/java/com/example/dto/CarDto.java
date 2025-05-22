@@ -13,9 +13,13 @@ import java.util.List;
 
 @Service
 public class CarDto {
-    @Autowired
-    private CarRepo carRepo;
 
+    private final CarRepo carRepo;
+
+    @Autowired
+    public  CarDto(CarRepo carRepo){
+        this.carRepo=carRepo;
+    }
 
     @Transactional
     public void saveCarDetails(List<Car> list){
@@ -23,6 +27,6 @@ public class CarDto {
     }
 
     public List<Car> getNewStatusCarList(){
-      return  carRepo.getAllRecordsStatusIsNew();
+        return  carRepo.getAllRecordsStatusIsNew();
     }
 }
